@@ -11,3 +11,5 @@ Validated on 2026-10-23 on an x86_64 Omarchy machine.
 - Official release-feed check returned 0.75.3 with RPM and DEB URLs.
 
 Not established by these checks: every Grok Bot GUI feature, clean-machine installation on vanilla Arch, ARM support, or a supported release of the three related Omarchy mods. Their repositories retain their own development status and release checklists.
+
+The live HTTPS hub and updater page were checked in headless Chromium at desktop (1440px) and mobile (390px) widths. A detail-page grid overflow found during QA was fixed. No horizontal page overflow remains at those widths. Four public projects render on the hub. Download redirects and private-stat HTTP exclusions were checked separately; counter regression tests use an isolated database.

@@ -48,4 +48,3 @@ public/
 Point a dedicated NPM host for `tools.danimoya.com` to `http://grok-bot-tools:8080`, obtain its TLS certificate, and force HTTPS. Existing hosts do not need changes. Start with `docker compose up -d`; inspect `docker compose ps`, `/healthz`, the homepage, detail page, and download HEAD responses. A release must exist at the fixed updater download URL before announcing it.
 
 To update, replace only application/public files, preserve `data/`, and restart the container. Export/backup the counter before deployment. To remove the website, disable its dedicated proxy host and stop its compose service; retain the data directory for records.
-
