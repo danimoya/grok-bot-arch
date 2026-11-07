@@ -17,6 +17,7 @@ PROJECTS = {
     'grok-bot-arch': 'https://github.com/danimoya/grok-bot-arch/releases/download/v0.1.0/grok-bot-arch-v0.1.0.zip',
     'google-drive': 'https://github.com/danimoya/omarchy-google-drive/archive/refs/heads/main.zip',
     'animated-screensaver': 'https://github.com/danimoya/omarchy-animated-screensaver/archive/refs/heads/main.zip',
+    'watch-lock': 'https://github.com/danimoya/omarchy-watch-lock/archive/refs/heads/main.zip',
     'monitor-mirror': 'https://github.com/danimoya/omarchy-monitor-mirror/archive/refs/heads/main.zip',
 }
 SOURCES = {'direct', 'reddit', 'linkedin', 'discord', 'x', 'mastodon', 'devto', 'hn', 'github', 'newsletter'}

@@ -62,6 +62,13 @@ class CounterTests(unittest.TestCase):
         with hub.connect(self.db) as db:
             self.assertEqual(db.execute('SELECT count(*) FROM downloads').fetchone()[0], 0)
 
+    def test_watch_lock_download_uses_only_fixed_public_source(self):
+        with self.get('/download/watch-lock?url=https://example.invalid/', method='HEAD') as response:
+            self.assertEqual(response.code, 302)
+            self.assertEqual(response.headers['Location'], 'https://github.com/danimoya/omarchy-watch-lock/archive/refs/heads/main.zip')
+        with hub.connect(self.db) as db:
+            self.assertEqual(db.execute('SELECT count(*) FROM downloads').fetchone()[0], 0)
+
     def test_unknown_project_and_public_stats_are_unavailable(self):
         for path in ['/download/unknown', '/stats', '/admin', '/metrics', '/data/downloads.sqlite3']:
             with self.get(path) as response:

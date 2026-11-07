@@ -1,6 +1,6 @@
 # Tools hub operations
 
-The hub serves static assets through a small Python server behind Nginx Proxy Manager. The homepage lists the four public projects; `/grok-bot/` contains the updater walkthrough. `site/server.py` maps fixed download slugs to GitHub URLs, preventing user-supplied redirect destinations.
+The hub serves static assets through a small Python server behind Nginx Proxy Manager. The homepage lists five public projects; `/grok-bot/` contains the updater walkthrough and `/watch-lock/` contains the Watch Lock development preview. `site/server.py` maps fixed download slugs to GitHub URLs, preventing user-supplied redirect destinations.
 
 ## Private download records
 
@@ -37,6 +37,10 @@ public/
   index.html             # site/hub.html
   hub.css
   hub.js
+  watch-lock/
+    index.html           # site/watch-lock/index.html
+    watch-lock.png       # synthetic QML preview, no real desktop data
+    watch-lock-faded.png
   grok-bot/
     index.html           # site/index.html
     style.css
